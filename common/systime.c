@@ -49,12 +49,13 @@ ticks_t SysTime_GetTicks(void)
     return high1 | cnt;
 }
 
-ticks_diff_t SysTime_GetDiff(ticks_t now)
+ticks_diff_t SysTime_GetDiff(ticks_t then)
 {
-	return 0;
+	return (ticks_diff_t)(SysTime_GetTicks() - then);
 }
 
 void SysTime_Delay(ticks_t ticks)
 {
-
+	ticks_t timestamp = SysTime_GetTicks();
+	while(SysTime_GetDiff(timestamp) <= ticks);
 }
