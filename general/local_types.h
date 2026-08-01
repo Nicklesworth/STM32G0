@@ -8,5 +8,6 @@
 
 #include "stdbool.h"
 #include "stdint.h"
+#include "string.h"
 
 #endif // LOCAL_TYPES_H_
