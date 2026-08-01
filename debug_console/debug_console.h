@@ -7,12 +7,15 @@
 #define DEBUG_CONSOLE_H_
 
 #include "local_types.h"
+#include "stm32g0xx_hal.h"
+
+extern UART_HandleTypeDef hDebugUART;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void DebugConsole_Init(void);
+void DebugConsole_Init(USART_TypeDef* UART);
 
 #ifdef __cplusplus
 }
