@@ -6,6 +6,7 @@
 #ifndef LOCAL_TYPES_H_
 #define LOCAL_TYPES_H_
 
+#include "stdbool.h"
 #include "stdint.h"
 
 #endif // LOCAL_TYPES_H_
